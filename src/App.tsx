@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom';
 
+const SOCIAL_URL = 'https://www.snapchat.com/add/blinkers27'
+
 const Btn = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(({ children, onClick, ...props }, ref) => {
     return (
         <button
@@ -172,7 +174,7 @@ const Game = () => {
     document.title = heading;
     const wordForYes = queryParams.get('y') ?? randomWordForYes + ' ' + randomEmoji();
     const wordForNo = queryParams.get('n') ?? 'Nuh uh!';
-    const onClickLink = queryParams.get('l') ?? 'https://www.snapchat.com/add/profile9345';
+    const onClickLink = queryParams.get('l') ?? SOCIAL_URL;
     //
     return (
         <div>
